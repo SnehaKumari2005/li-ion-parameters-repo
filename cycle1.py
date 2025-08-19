@@ -19,7 +19,7 @@ for idx in range(0, len(cycles), 2):
 
     
     if "data" not in cycle.dtype.names:
-        print(f"Cycle {cycle_num}: MISSING 'data' field ❌")
+        print(f"Cycle {cycle_num}: MISSING 'data' field")
         continue
 
     data = cycle["data"][0, 0]
@@ -27,7 +27,7 @@ for idx in range(0, len(cycles), 2):
 
     required = ["Time", "Voltage_measured", "Current_measured"]
     if not all(field in fields for field in required):
-        print(f"Cycle {cycle_num}: Missing fields → {[f for f in required if f not in fields]} ❌")
+        print(f"Cycle {cycle_num}: Missing fields → {[f for f in required if f not in fields]} ")
         continue
 
     
@@ -36,7 +36,7 @@ for idx in range(0, len(cycles), 2):
     current = np.array(data["Current_measured"]).flatten()
 
     if len(time) == 0 or len(voltage) == 0 or len(current) == 0:
-        print(f"Cycle {cycle_num}: Empty data arrays ❌")
+        print(f"Cycle {cycle_num}: Empty data arrays")
         continue
 
     
