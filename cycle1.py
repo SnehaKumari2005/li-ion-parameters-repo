@@ -56,7 +56,7 @@ for idx in range(0, len(cycles), 2):
     all_current.append(current_i)
     all_soc.append(soc_i)
 
-    print(f"Cycle {cycle_num}: Processed ✅")
+    print(f"Cycle {cycle_num}: Processed")
 
 
 if all_voltage:
@@ -88,4 +88,4 @@ if all_voltage:
     plt.tight_layout()
     plt.show()
 else:
-    print("No valid odd cycles found for averaging ❌")
+    print("No valid odd cycles found for averaging")
